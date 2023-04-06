@@ -1,5 +1,5 @@
 {
-  "name": "parse-stringify",
+  "name": "bens-parse-stringify",
   "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
