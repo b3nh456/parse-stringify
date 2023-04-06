@@ -1,5 +1,5 @@
 {
-  "name": "bens-parse-stringify",
+  "name": "json-converters",
   "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
