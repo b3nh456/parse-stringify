@@ -11,6 +11,12 @@ function replacer(key: string, value: any) {
             value: Array.from(value), // or with spread: value: [...value]
         };
     }
+    else if (value instanceof Uint8ClampedArray) {
+        return {
+            dataType: 'Uint8ClampedArray',
+            value: Array.from(value), // or with spread: value: [...value]
+        };
+    }
     else {
         return value;
     }
@@ -23,6 +29,9 @@ function reviver(key: string, value: any) {
         }
         if (value.dataType === 'Uint8Array') {
             return new Uint8Array(value.value);
+        }
+        if (value.dataType === 'Uint8ClampedArray') {
+            return new Uint8ClampedArray(value.value);
         }
     }
     return value;
